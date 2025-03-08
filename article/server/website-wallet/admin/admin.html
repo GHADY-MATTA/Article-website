@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Search</title>
+    <link rel="stylesheet" href="/website-wallet\client\assets\homestyle.css">
+    
+        
+    
+        
+</head>
+
+<body>
+    
+         
+    <section  class="admin-section">
+
+    
+    <header>
+        <h1 class="big-title">Admin Panel</h1>
+    </header>
+    <br>
+    <!-- User Search Section -->
+     <button class="input-btn" id="jquery1">search-hide</button><br>
+     <div id="btn1"> 
+    <div class="search-usersmail elegant-box">
+        <div class="search-container">
+            <form id="searchForm" >
+                <input   type="text" id="searchKeyword" name="keyword" placeholder="Search by name..." required>
+                <button class="back-btn" type="submit">Search-hide</button>
+            </form>
+        </div>
+        <div id="searchResults"></div>
+    </div>
+    </div><br>
+    <button class="input-btn" id="jquery2">transaction-hide</button><br>
+    <div id="btn2">
+    <!-- Transaction Search Section -->
+    <div class="search-transaction elegant-box">
+        <form method="get" action="/website-wallet/server(api)/php/admin-transaction-search.php">
+            <input type="text" id="transactionKeyword" name="transactionKeyword" placeholder="Search by name/date" required>
+            <button class="back-btn" type="submit">Search</button>
+        </form>
+        <div id="searchResults-transaction"></div>
+    </div>
+    </div>
+    <br>
+<!-- P2P Transaction Search Section -->
+<!-- P2P Transaction Search Section -->
+ <button class="input-btn" id="jquery3">p2pKeyword</button><br>
+ <div id="btn3">
+<div class="search-p2p elegant-box">
+    <div class="search-container">
+        <form  method="GET" action="/website-wallet/server(api)/php/p2p-admin-search.php">
+            <input type="text" name="p2pKeyword" placeholder="Enter keyword">
+            <input class="back-btn"  type="submit" value="Search">
+        </form>
+
+    </div>
+    <div id="p2pSearchResults"></div>
+</div>
+</div>
+<button class="back-btn " onclick="window.history.back()">Back</button>
+
+
+<!-- P2P Transaction Search Section -->
+
+<!-- ---------------- notifications------ -->
+ <br>
+ <br>
+<button class="input-btn" id="jquery4">hide-p2p</button><br>
+<!-- Live Transactions Table -->
+ <div id="btn4">
+<div class="live-transactions elegant-box">
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Sender User ID</th>
+                <th>Receiver User ID</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody id="liveTransactions">
+            <!-- Transactions will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
+</div>
+
+<br>
+<button class="back-btn" id="jquery5">hide-transaction-table</button> <br>
+<div id="btn5">
+<div class="transaction-table elegant-box">
+    <table id="transactionTable">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>User ID</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Reference ID</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Transactions will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="export-data">
+    <button class="input-btn" id="exportBtn">Export Database</button>
+</div>
+<button class="back-btn" id="jquery6">toggle api testing</button>
+<section  style="display: none;" id="btn6" class="testing-js elegant-box"> <br>
+    <h1>testing-js</h1>
+    <div id="userContainer"></div>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="\website-wallet\admin\generals\script-taha.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+     $(document).ready(function () {
+            // Particle animation
+           
+
+            // Button interactions
+            $("#jquery1").on('click', function () {
+                $("#btn1").toggle(1000, function () {
+                    $(this).css({ opacity: 1 });
+                });
+            });
+
+            // Button interactions
+         $("#jquery2").on('click', function () {
+             $("#btn2").toggle(1000, function () {
+                 $(this).css({ opacity: 1 });
+             });
+         });
+         $("#jquery3").on('click', function () {
+             $("#btn3").toggle(1000, function () {
+                 $(this).css({ opacity: 1 });
+             });
+         });
+         $("#jquery4").on('click', function () {
+             $("#btn4").toggle(1000, function () {
+                 $(this).css({ opacity: 1 });
+             });
+         });
+          $("#jquery5").on('click', function () {
+             $("#btn5").toggle(1000, function () {
+                 $(this).css({ opacity: 1 });
+             });
+         });
+
+         $("#jquery6").on('click', function () {
+             $("#btn6").toggle(1000, function () {
+                 $(this).css({ opacity: 1 });
+             });
+         });
+
+            
+        });
+
+
+   
+        </script>
+
+
+ 
+
+<script src="exportBtn.js"></script>
+
+<script src="fetchTransactions.js"></script>
+
+
+<script src="transnoti.js"></script>
+
+    <script src="searchuser.js"></script>
+</body>
+
+</html>

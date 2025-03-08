@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/website-wallet\client\assets\homestyle.css">
+
+    
+    
+</head>
+
+<body>
+    <!-- New container for the login form -->
+    <div  class="custom-login-container">
+        <div class="custom-login-page">
+            <h1 class="custom-login-title big-title ">Log In</h1>
+            <form method="post" action="/website-wallet/server(api)/php/login.php">
+                <p class="custom-form-field">
+                    <label for="email" class="medium-title">Email</label>
+                    <input class="input-css" type="email" name="email" id="email" value="" required class="custom-input">
+                </p>
+
+                <p class="custom-form-field">
+                    <label for="password" class="custom-label medium-title">Password</label>
+                    <input class="input-css"  type="password" name="password" id="password" required class="custom-input">
+                </p> <br>
+
+                <p class="custom-form-field">
+                    <input type="submit" name="submit" value="LOG IN" class="input-btn">
+                </p>
+            </form> <br>
+            <button class="back-btn" ><a href="/website-wallet/client/assets/homepage.html">back</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

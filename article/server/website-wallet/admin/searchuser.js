@@ -4,7 +4,7 @@ document.getElementById("searchForm").addEventListener("submit", function(e) {
     const keyword = document.getElementById("searchKeyword").value.trim();
 
     if (keyword !== "") {
-        fetch(`/article/server/database/search.php?keyword=${encodeURIComponent(keyword)}`)
+        fetch(`/website-wallet/server(api)/php/admin-search.php?keyword=${encodeURIComponent(keyword)}`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById("searchResults").innerHTML = data;

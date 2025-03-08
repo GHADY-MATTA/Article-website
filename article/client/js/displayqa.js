@@ -1,6 +1,7 @@
 // Define the API URL where the PHP script is located
 const API_URL = "/article/server/database/getaq.php";
 console.log(API_URL);
+
 // Fetch data from the PHP script
 fetch(API_URL)
     .then(res => {
@@ -11,31 +12,28 @@ fetch(API_URL)
         return res.json(); // Parse the response as JSON
     })
     .then(data => {
-        const userContainer = document.getElementById("userContainer");
+        const userContainer = document.getElementById("searchResults");
         let markup = ""; // Variable to hold HTML markup for user data
 
         // Check if the data has results
         if (data && data.length > 0) {
             // Loop through the data and create user cards
             data.forEach(user => {
-                const { username, userlastname, userques, useranswer, created_at } = user;
-
-                // Format the date to a readable format
-                const formattedDate = new Date(created_at).toLocaleString();
+                // Destructure the fields from the data
+                const { username, lastname, questions, answers, created_at } = user;
 
                 // Create HTML structure for each user entry
                 const cardMarkup = `
                     <div class="user-card">
-                        <h3>${username} ${userlastname}</h3>
-                        <p><strong>Question:</strong> ${userques}</p>
-                        <p><strong>Answer:</strong> ${useranswer}</p>
-                        <p><strong>Submitted On:</strong> ${formattedDate}</p>
+                        <h3>${username} ${lastname}</h3>
+                        <p><strong>Question:</strong> ${questions}</p>
+                        <p><strong>Answer:</strong> ${answers}</p>
                     </div>
                 `;
                 markup += cardMarkup; // Append the card markup
             });
 
-            // Insert the generated markup into the userContainer
+            // Insert the generated markup into the searchResults
             userContainer.innerHTML = markup;
         } else {
             // If no data found, display a message
@@ -45,5 +43,5 @@ fetch(API_URL)
     .catch(error => {
         // Handle any errors that occur during the fetch
         console.error("Error fetching user data:", error);
-        document.getElementById("userContainer").innerHTML = "<p>Error fetching data.</p>";
+        document.getElementById("searchResults").innerHTML = "<p>Error fetching data.</p>";
     });

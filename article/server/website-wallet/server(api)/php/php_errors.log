@@ -1,0 +1,30 @@
+[01-Mar-2025 11:28:27 Europe/Berlin] Script started
+[01-Mar-2025 11:28:27 Europe/Berlin] Database connected successfully
+[01-Mar-2025 11:28:27 Europe/Berlin] Keyword received: empty
+[01-Mar-2025 11:28:27 Europe/Berlin] SQL Query: SELECT * FROM usersmail 
+            WHERE username LIKE '%empty%' 
+            OR phone LIKE '%empty%' 
+            OR address LIKE '%empty%' 
+            OR balance LIKE '%empty%' 
+            OR tier LIKE '%empty%' 
+            OR email LIKE '%empty%' 
+            OR id LIKE '%empty%'
+[01-Mar-2025 11:28:27 Europe/Berlin] Records found: 2
+[01-Mar-2025 11:28:27 Europe/Berlin] Database connection closed
+[01-Mar-2025 11:29:48 Europe/Berlin] Script started
+[01-Mar-2025 11:29:48 Europe/Berlin] Database connected successfully
+[01-Mar-2025 11:29:48 Europe/Berlin] No keyword provided
+[01-Mar-2025 11:29:48 Europe/Berlin] Database connection closed
+[01-Mar-2025 11:30:02 Europe/Berlin] Script started
+[01-Mar-2025 11:30:02 Europe/Berlin] Database connected successfully
+[01-Mar-2025 11:30:02 Europe/Berlin] Keyword received: empty
+[01-Mar-2025 11:30:02 Europe/Berlin] SQL Query: SELECT * FROM usersmail 
+            WHERE username LIKE '%empty%' 
+            OR phone LIKE '%empty%' 
+            OR address LIKE '%empty%' 
+            OR balance LIKE '%empty%' 
+            OR tier LIKE '%empty%' 
+            OR email LIKE '%empty%' 
+            OR id LIKE '%empty%'
+[01-Mar-2025 11:30:02 Europe/Berlin] Records found: 2
+[01-Mar-2025 11:30:02 Europe/Berlin] Database connection closed
