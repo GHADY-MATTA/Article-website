@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="log-in">
+        <h1>welcome to the article </h1>
+        <p>Register / <a href="sign-up.html">Sign-Up</a></p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, aperiam!</p>
+        <div class="login-form">
+            <form method="POST" action="/article/server/api1/login.php">
+                <div class="mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
