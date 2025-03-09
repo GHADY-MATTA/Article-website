@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="log-in container">
+        <h1 class="h-tag">welcome to the article </h1>
+        <p class="p-tag">Register / <a class="a-tag" href="sign-up.html">Sign-Up</a></p>
+        <p class="p-tag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, aperiam!</p>
+        <div class="login-form">
+            <form class="box" method="POST" action="/article/server/api1/login.php">
+                <div class="mb-3">
+                    <label class="label-tag p-tag" for="email">Email:</label>
+                    <input class="input-btn" type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="label-tag p-tag" for="password">Password:</label>
+                    <input class="input-btn" type="password" name="password" id="password" class="form-control" required>
+                </div> <br>
+                <button class="login-btn btn-btn" type="submit" class="btn btn-primary p-tag">Login</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
