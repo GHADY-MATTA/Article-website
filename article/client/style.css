@@ -1,0 +1,622 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* /* Prevents elem   */
+}
+
+/* Elegant Container Box */
+.container {
+    background: #1A1A1A;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    max-width: 400px;
+    /* Responsive width */
+    width: 90%;
+    margin-top: 2rem;
+    /* /* Ensures space at the */
+}
+
+.container:hover {
+    border-color: #D4AC0D;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+/* Box Styling */
+.box {
+    background: #1E1E1E;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+}
+
+.box:hover {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Labels */
+.label-tag {
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs & Text Areas */
+.input-btn,
+.text-area {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+}
+
+.input-btn:focus,
+.text-area:focus {
+    border-color: #D4AC0D;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Links (a tags) */
+.a-tag {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.a-tag:hover {
+    color: #D4AC0D;
+    border-bottom: 2px solid #D4AC0D;
+}
+
+/* Buttons */
+.btn-btn {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s, border-color 0.3s;
+}
+
+/* Back Button */
+.back-btn {
+    border: 1px solid #D4AC0D !important;
+    border-radius: 1rem 2rem !important;
+    padding: 1rem 2rem !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    background-color: #222 !important;
+    color: #D4AC0D !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    width: 100% !important;
+    display: inline-block !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.back-btn:hover {
+    background-color: #444 !important;
+    border-color: #D4AC0D !important;
+    transform: scale(1.05) !important;
+    border-radius: 2rem 1rem !important;
+}
+
+/* Login & Sign Up Buttons */
+.login-btn,
+.signUp-btn {
+    border: 1px solid #D4AC0D;
+    border-radius: 2rem 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.login-btn {
+    background-color: #D4AC0D;
+    color: #121212;
+}
+
+.login-btn:hover {
+    background-color: #b68d40;
+    border-color: #D4AC0D;
+    transform: scale(1.05);
+    border-radius: 1rem 2rem;
+}
+
+.signUp-btn {
+    background-color: transparent;
+    color: #D4AC0D;
+}
+
+.signUp-btn:hover {
+    background-color: #222;
+    border-color: #D4AC0D;
+    transform: scale(1.05);
+    border-radius: 1rem 2rem;
+}
+
+/* Text Styles */
+.p-tag {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: justify;
+    transition: color 0.3s;
+}
+
+.p-tag:hover {
+    color: #f5f5f5;
+}
+
+.h-tag {
+    font-size: 28px;
+    font-weight: bold;
+    color: #D4AC0D;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.h-tag:hover {
+    color: #f5f5f5;
+}
+
+/* Font Sizes */
+.big-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #D4AC0D;
+}
+
+.medium-text {
+    font-size: 22px;
+    color: #ddd;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.logout-btn {
+    border: 1px solid #D4AC0D;
+    border-radius: 2rem 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    background-color: transparent;
+    color: #D4AC0D;
+    width: 100%;
+}
+
+.logout-btn:hover {
+    background-color: #222;
+    border-color: #D4AC0D;
+    transform: scale(1.05);
+    border-radius: 1rem 2rem;
+}
+
+/* General styling for the user cards container */
+
+/* Styling for individual user cards */
+/* Styling for individual user cards */
+.user-card {
+    background: #1E1E1E;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.2);
+    width: 100%; /* Now takes full width */
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover effect for user cards */
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    border-color: #D4AC0D;
+}
+
+/* Styling for the heading (username and lastname) */
+.user-card .h-tag {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D4AC0D;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on heading */
+.user-card .h-tag:hover {
+    color: #f5f5f5;
+}
+
+
+/* Responsive Design: Adjust layout on smaller screens */
+@media screen and (max-width: 768px) {
+    .user-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+}
+
+/* Additional Responsive Styling for 500px screens */
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 30px;
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .input-btn,
+    .text-area {
+        min-width: 250px;
+    }
+
+    .h-tag {
+        font-size: 24px;
+    }
+
+    .big-text {
+        font-size: 32px;
+    }
+
+    .medium-text {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .user-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Additional Responsive Styling for 400px screens */
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .input-btn,
+    .text-area {
+        min-width: 200px;
+    }
+
+    .h-tag {
+        font-size: 20px;
+    }
+
+    .big-text {
+        font-size: 28px;
+    }
+
+    .medium-text {
+        font-size: 18px;
+    }
+
+    .small-text {
+        font-size: 10px;
+    }
+
+    .user-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Media Queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .h-tag {
+        font-size: 24px;
+    }
+
+    .small-text {
+        font-size: 14px;
+    }
+
+    .input-btn,
+    .text-area {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for screens up to 500px wide */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        /* Center container */
+    }
+
+    .h-tag {
+        font-size: 22px;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .input-btn,
+    .text-area {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    /* Ensure any element with the "media" class is centered and stacked */
+    .media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Media Query for screens up to 400px wide */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 auto;
+        /* Center container */
+    }
+
+    .h-tag {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 10px;
+    }
+
+    .input-btn,
+    .text-area {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+/* Optional: Prevent horizontal scrolling */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Table Styling for Q&A Display */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background-color: #222;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: #1E1E1E;
+    color: #D4AC0D;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #1A1A1A;
+}
+
+table tr:nth-child(even) td {
+    background-color: #1E1E1E;
+}
+
+@media screen and (max-width: 500px) {
+    table {
+        font-size: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    table {
+        font-size: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 6px;
+    }
+}
+
+/* ===== Table Styling for Q&A Data ===== */
+.data-table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+    color: #f5f5f5;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #1E1E1E;
+    color: #D4AC0D;
+    font-weight: bold;
+}
+
+.data-table td {
+    background-color: #1A1A1A;
+}
+
+.data-table tr:nth-child(even) td {
+    background-color: #1E1E1E;
+}
+
+/* Responsive adjustments for the table */
+@media screen and (max-width: 500px) {
+    .data-table {
+        font-size: 12px;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .data-table {
+        font-size: 10px;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 6px;
+    }
+}
+
+/* ===== User Card Styling ===== */
+.user-card {
+    background: #1E1E1E;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    margin: 1rem auto;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    border-color: #D4AC0D;
+}
+
+.user-card .h-tag {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D4AC0D;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.user-card .h-tag:hover {
+    color: #f5f5f5;
+}
+
+.user-card p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.user-card p strong {
+    color: #D4AC0D;
+}
+
+/* Responsive adjustments for user cards */
+@media screen and (max-width: 500px) {
+    .user-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 15px;
+    }
+    .user-card .h-tag {
+        font-size: 20px;
+    }
+    .user-card p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .user-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+    .user-card .h-tag {
+        font-size: 18px;
+    }
+    .user-card p {
+        font-size: 12px;
+    }
+}

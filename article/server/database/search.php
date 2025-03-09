@@ -5,7 +5,7 @@ if (isset($_GET['keyword'])) {
     $keyword = $conn->real_escape_string($_GET['keyword']);
 
     // Modified SQL query to select only required columns
-    $sql = "SELECT username, lastname, email, questions, answers FROM qatabel 
+    $sql = "SELECT username, lastname, email, questions, answers,created_at FROM qatabel 
             WHERE username LIKE '%$keyword%' 
             OR lastname LIKE '%$keyword%' 
             OR email LIKE '%$keyword%' 
@@ -15,7 +15,7 @@ if (isset($_GET['keyword'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<div style='overflow-x:auto;'>";
+        echo "<div class='box'  style='overflow-x:auto;'>";
         echo "<table border='1' cellpadding='5' cellspacing='0'>";
 
         // Table headers
@@ -25,6 +25,7 @@ if (isset($_GET['keyword'])) {
                 <th>Email</th>
                 <th>Questions</th>
                 <th>Answers</th>
+                <th>Date</th>
               </tr>";
 
         // Fetch and display data
@@ -35,6 +36,7 @@ if (isset($_GET['keyword'])) {
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "<td>" . htmlspecialchars($row['questions']) . "</td>";
             echo "<td>" . htmlspecialchars($row['answers']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
             echo "</tr>";
         }
 

@@ -24,11 +24,13 @@ fetch(API_URL)
 
                 // Create HTML structure for each user entry
                 const cardMarkup = `
-                    <div class="user-card">
-                        <h3>${username} ${lastname}</h3>
-                        <p><strong>Question:</strong> ${questions}</p>
-                        <p><strong>Answer:</strong> ${answers}</p>
-                    </div>
+                    <div class="box">
+                        <h3 class="label-tag h-tag">${username} ${lastname}</h3>
+                        <p class="small-text">${created_at}</p><br>
+                        <p class="input-btn medium-text"><strong>Question:</strong> ${questions}</p><br>
+                        <p class="input-btn medium-text"><strong>Answer:</strong> ${answers}</p> <br>
+
+                    </div><br>
                 `;
                 markup += cardMarkup; // Append the card markup
             });

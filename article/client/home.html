@@ -5,65 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .user-card {
-            border: 1px solid #ddd;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
+    <link rel="stylesheet" href="/article/client/style.css">
     
-        .user-card h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-    
-        .user-card p {
-            margin: 5px 0;
-        }
-    </style>
-</head>
+   </head>
 
 
 <body>
-    <div class="homestyle">
-        <h2>Welcome</h2>
+    <div class="homestyle ">
+        <h2 class="h-tag big-text">Welcome</h2>
         <div>
-            <a href="/article/client/addqa.html">+Add(Q&A)</a>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dolorem temporibus sequi ut voluptatum accusantium ratione obcaecati aut fugit. Error excepturi incidunt, voluptates porro quasi animi architecto atque nemo hic!</p>
+            <a class="a-tag signUp-btn" href="/article/client/addqa.html">+Add(Q&A)</a><br>
+        </div><br>
+        <p class="p-tag small-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dolorem temporibus sequi ut voluptatum accusantium ratione obcaecati aut fugit. Error excepturi incidunt, voluptates porro quasi animi architecto atque nemo hic!</p>
 
-        <div class="search-q&a">
+        <div  class="search-q&a box">
             <div class="search-container">
-                <form id="searchForm">
-                    <input type="text" id="searchKeyword" name="keyword" placeholder="Search by name..." required>
-                    <button class="back-btn" type="submit">Search</button>
+                <form id="searchForm"><br>
+                    <input class="input-btn" type="text" id="searchKeyword" name="keyword" placeholder="Search by name..." required><br>
+                    <br>
+                    <button class="back-btn" type="submit">Search</button><br>
                 </form>
-            </div>
-            <div id="searchResults"></div>
+            </div><br>
+            <div class="dipslay-q&q" id="searchResults"></div> <br>
         </div>
-        </div> <br>
+         <br>
 
         <div class="display-qa" >
 
-<div id="userContainer">
+<div class="box" id="userContainer">
     <!-- User data will be dynamically inserted here -->
-</div>
+</div> <br>
 
+        </div> <br>
 
-        </div>
-
-
-
-
-
-
-
-
-        
-        <a href="/article/server/api1/logout.php" class="btn btn-danger">Logout</a>
+        <a href="/article/server/api1/logout.php" class="logout-btn a-tag">Logout</a>
+    </div>
     </div>
 <script src="/article/client/js/usersearch.js"></script>
 

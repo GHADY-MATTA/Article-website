@@ -5,41 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 
 
-    <div class="add">
-        <h1>Welcome to the Add Questions and Answers</h1>
+    <div class="container media">
+        <h1 class="h-tag">Welcome to the Add Questions and Answers</h1>
     
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, aperiam!</p>
+        <p class="small-text p-tag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, aperiam!</p>
     
-        <div class="add-qa">
+        <div class="add-qa box">
             <form method="post" action="#">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required>
+                <label class="label-tag small-text" for="username">Username:</label>
+                <input class="input-btn" type="text" name="username" id="username" required>
     
-                <label for="lastname">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" required>
+                <label class="label-tag small-text" for="lastname">Last Name:</label>
+                <input class="input-btn" type="text" name="lastname" id="lastname" required>
     
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" required>
+                <label class="label-tag small-text"  for="email">Email:</label>
+                <input class="input-btn" type="email" name="email" id="email" class="form-control" required>
     
-                <label for="questions">Questions:</label>
-                <textarea name="questions" id="questions" required></textarea>
+                <label class="label-tag small-text"  for="questions">Questions:</label>
+                <textarea class="text-area" name="questions" id="questions" required></textarea>
     
-                <label for="answers">Answers:</label>
-                <textarea name="answers" id="answers" required></textarea>
+                <label class="label-tag small-text"  for="answers">Answers:</label>
+                <textarea class="text-area" name="answers" id="answers" required></textarea>
     
-                <button type="submit">Submit</button>
+                <button class="back-btn small-text" type="submit">Submit</button>
             </form>
+        </div>
+        <div class="">
+            <button class="logout-btn small-text" onclick="window.history.back()">Back</button>
         </div>
     </div>
 
-<div class="">
-    <button class="input-btn" onclick="window.history.back()">Back</button>
-</div>
+
 
 <script src="/article/client/js/addqa.js"></script>
 

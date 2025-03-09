@@ -8,7 +8,8 @@ $sql = "SELECT
             lastname, 
             email, 
             questions, 
-            answers 
+            answers,
+            created_at
         FROM qatabel";
 
 // Execute the query

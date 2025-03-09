@@ -6,49 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <section class="signup-section">
-        <h1 class="big-title">Sign Up</h1>
-        <h5 class="medium-title">Create a Free Account or <a href="login.html">Log in</a></h5>
+    <section class="signup-section container">
+        <h1 class="h-tag">Sign Up</h1>
+        <h5 class="medium-text h-tag">Create a Free Account or <a class="a-tag medium-text" href="login.html">Log in</a></h5>
 
-        <div class="div-form elegant-box">
+        <div class="box">
             <form id="signupForm">
                 <!-- Username Field -->
-                <label class="medium-title" for="username">Username</label><br>
-                <input class="input-wid" type="text" id="username" name="username" placeholder="Enter your username"
+                <label class="small-text label-tag" for="username">Username</label>
+                <input class="input-btn" type="text" id="username" name="username" placeholder="Enter your username"
                     required><br>
 
-                <!-- Last Name Field -->
-                <label class="medium-title" for="lastname">Last Name</label><br>
-                <input class="input-wid" type="text" id="lastname" name="lastname" placeholder="Enter your last name"
+                <!-- Last Name Field --><br>
+                <label class="small-text label-tag" for="lastname">Last Name</label>
+                <input class="input-btn" type="text" id="lastname" name="lastname" placeholder="Enter your last name"
                     required><br>
 
-                <!-- Email Field -->
-                <label class="medium-title" for="email">Email</label><br>
-                <input type="email" id="email" name="email" placeholder="yourname@example.com" required><br>
+                <!-- Email Field --><br>
+                <label class="small-text label-tag" for="email">Email</label>
+                <input class="input-btn" type="email" id="email" name="email" placeholder="yourname@example.com" required><br>
 
-                <!-- Password Field -->
-                <label class="medium-title" for="password">Password</label><br>
-                <input type="password" id="password" name="password"
-                    placeholder="At least 8 characters, 1 number, 1 uppercase, 1 special character" required><br>
+                <!-- Password Field --><br>
+                <label class="small-text label-tag" for="password">Password </label>
+                <input class="input-btn" type="password" id="password" name="password"
+                    placeholder="At least 8 characters, 1 number, 1 uppercase, 1 special character" required>
 
-                <!-- Password Confirmation Field -->
-                <label class="medium-title" for="password_confirmation">Confirm Password</label><br>
-                <input type="password" id="password_confirmation" name="password_confirmation"
+                <!-- Password Confirmation Field --> <br></br>
+                <label class="small-text label-tag" for="password_confirmation">Confirm Password </label>
+                <input class="input-btn" type="password" id="password_confirmation" name="password_confirmation"
                     placeholder="Confirm your password" required><br>
 
                 <!-- Sign Up Button -->
-                <div class="sign-up">
+                <div class="sign-up"><br>
                     <input class="back-btn" type="submit" value="Sign Up"><br>
                 </div>
-            </form>
+            </form> <br>
 
             <!-- Back Button -->
             <div class="backbtn1">
-                <button class="input-btn" onclick="window.history.back()">Back</button>
+                <button class="back-btn " onclick="window.history.back()">Back</button>
             </div>
         </div>
 
